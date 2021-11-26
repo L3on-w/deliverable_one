@@ -10,12 +10,13 @@ namespace deliverable1
 
             // 1 inch = 3.5 fidget spinners
             // 1 foot = 5 memes
+            // while loop if they would like to do another conversion after their first one
             bool userContinue = true;
 
-            while (userContinue == true)
+            while (userContinue == true) 
 
             {
-                Console.WriteLine("What unit of measurement would you like? Please select one of the following: Foot, Inches, Fidget Spinners, Memes");
+                Console.WriteLine("What type of measurement would you like?");
                 string userResponse = Console.ReadLine();
                 string userInput = userResponse.ToLower();
 
@@ -48,15 +49,18 @@ namespace deliverable1
                     Console.WriteLine(inchOutput + " inches");
                 }
 
-                Console.WriteLine("Would you like to convert another one? (yes/no)");
-                string userAgain = Console.ReadLine();
-                string userReply = userAgain.ToLower();
+                Console.WriteLine("Would you like to convert another one?");
+                string userAnswer = Console.ReadLine();
 
                 if (userResponse == "yes")
                 {
-                    userContinue = true;
+                    while (userContinue == true)
+                    {
+                        Console.WriteLine("What type of measurement would you like?");
+                    }
+
                 }
-                else
+                else 
                 {
                     break;
                 }
